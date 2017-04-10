@@ -33,4 +33,29 @@ ng build
 # 
 ng serve --prod
 
+#ngModule and Routing 
+ng g module admin
+#create project with routing and dry run with routing module and app module
+ng new newproject --routing -d
+#Example of routing from:
+http://angular2-first-look.azurewebsites.net/
+#generate new module and its routing 
+ng g m admin --routing 
+#generate component in admin module
+ng g c admin/users
 
+
+#Generate Guard auth
+ng g guard auth
+
+#Building and dyploying the app into dist folder as defined in angular-cli.json as outDir
+ng build
+#analyze the sourcemap to draw a dependancy map, Reveals exactly which modules and classes are in the bundle 
+https://github.com/danvk/source-map-explorer
+# tool installed to manage the build bundles to optomize code in size 
+npm install source-map-explorer --save-dev
+#run the tool in the browser to view the builded bundles contents with files size 
+./node_modules/.bin/source-map-explorer dist/main.bundle.js     
+#type of Builds
+#  Environment Build to indicate which file to use between environment.prod.ts and environment.ts
+#Target build to define how and if the files to be optimized
