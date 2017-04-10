@@ -59,3 +59,14 @@ npm install source-map-explorer --save-dev
 #type of Builds
 #  Environment Build to indicate which file to use between environment.prod.ts and environment.ts
 #Target build to define how and if the files to be optimized
+#sm:source map is optional which used to view the file size in the browser when the project is builded 
+ng build --prod -sm
+ng build --prod 
+ng build --aot
+ng build --help
+
+#run the ng command automatically when loading the app without using cli
+# use ng eject to generate webpack configration in the project 
+
+#using angular material 
+ng i @angular/material --save
